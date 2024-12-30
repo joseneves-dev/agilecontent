@@ -16,3 +16,10 @@ Route::middleware('auth:sanctum')->prefix('user')->group(function () {
     
     Route::delete('delete', [UserController::class, 'destroy']);
 });
+
+Route::fallback(function () {
+    return response()->json([
+        'message' => 'Resource not found',
+        'error' => 'Not Found'
+    ], 404);
+});
