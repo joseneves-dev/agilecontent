@@ -2,26 +2,12 @@
 
 namespace App\Http\Controllers;
 
-use Illuminate\Http\Request;
-use Illuminate\Support\Facades\Hash;
-use Illuminate\Support\Facades\DB;
+use Illuminate\Foundation\Auth\Access\AuthorizesRequests;
+use Illuminate\Foundation\Validation\ValidatesRequests;
+use Illuminate\Foundation\Bus\DispatchesJobs;
+use Illuminate\Routing\Controller as BaseController;
 
-use Exception;
-
-abstract class Controller
+class Controller extends BaseController
 {
-    public function update(Request $request, $id)
-    {
-    
-    }
-
-    public function show($id)
-    {
-
-    }
-
-    public function destroy($id)
-    {
-
-    }
+    use AuthorizesRequests, ValidatesRequests, DispatchesJobs;
 }
