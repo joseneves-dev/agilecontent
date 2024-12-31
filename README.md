@@ -32,6 +32,7 @@ php artisan db:seed
 # Step 6: Start the Development Server
 php artisan serve
 
+---
 
 ## Testing with Postman
 
