@@ -32,6 +32,9 @@ php artisan db:seed
 # Step 6: Start the Development Server
 php artisan serve
 
+
+## Testing with Postman
+
 # Login Endpoint
 # URL: http://127.0.0.1:8000/api/login
 # Method: POST
