@@ -34,7 +34,7 @@ php artisan serve
 
 ---
 
-## Testing with Postman
+### Testing with Postman
 
 # Login Endpoint
 # URL: http://127.0.0.1:8000/api/login
