@@ -48,7 +48,6 @@ class AuthController extends Controller
             'email' => 'required|string|email|max:255|unique:users',
             'password' => 'required|string|min:8|confirmed',
             'countryId' => 'required|exists:countries,id',  // Ensure countryId exists in countries table
-            'isActive' => 'required|boolean',
         ]);
 
         if ($validator->fails()) {
@@ -66,7 +65,6 @@ class AuthController extends Controller
                 'email' => $request->email,
                 'password' => Hash::make($request->password),
                 'countryId' => $request->countryId,
-                'isActive' => $request->isActive ?? true,
             ]);
 
             DB::commit();
