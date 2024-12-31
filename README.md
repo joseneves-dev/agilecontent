@@ -31,11 +31,12 @@ php artisan db:seed
 
 # Step 6: Start the Development Server
 php artisan serve
-
+```
 ---
 
 ### Testing with Postman
 
+```bash
 # Login Endpoint
 # URL: http://127.0.0.1:8000/api/login
 # Method: POST
@@ -67,11 +68,11 @@ php artisan serve
 # URL: http://127.0.0.1:8000/api/user/update
 # Method: PUT (returns 403 Forbidden if user is inactive)
 {
-  "name": "string",
-  "email": "string",
-  "password": "string",
-  "password_confirmation": "string",
-  "countryId": "number (1 to 10)"
+  "name": "string | optional",
+  "email": "string | optional",
+  "password": "string | optional",
+  "password_confirmation": "string | optional",
+  "countryId": "number (1 to 10) | optional"
 }
 
 # Delete User Endpoint
